@@ -1,0 +1,18 @@
+.title{
+    border: 2px black solid;
+    display: flex;
+    width: 427px;
+    justify-content: center;
+    margin: auto;
+    height: 51px;
+    margin-top: 45px;
+    font-size: 36px;
+    
+}
+.clock{
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    margin: 18px;
+    font-size: 67px;
+}
