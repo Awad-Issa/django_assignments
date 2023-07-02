@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+</head>
+<body style="background-color: black; color: gold; ; display: flex;">
+    <div style="display: inline; width: 300px;  justify-items: center; margin-left: 400px;  padding: 50px; margin-right: 200px;  font-family: math;
+    font-variant-caps: unicase;">
+        <h1>Add a New Show</h1>
+        <form action="/showsform" method="POST">
+            {% csrf_token %}
+            <label for="">Title</label>
+            <input type="text" name="title" style="background-color: blanchedalmond;">
+            <label for="">Network</label>
+            <input type="text" name="network" style="background-color: blanchedalmond;">
+            <label for="">Relase Date</label >
+            <input type="date" name="date" style="background-color: blanchedalmond;">
+            <label for="">Description</label>
+            <input type="text" name="desc" style="height: 80px; margin-bottom: 10px; background-color: blanchedalmond;">
+            <input type="submit" value="Create" style="background-color:darkred; color: gold;">
+    </form>
+    </div>
+        <a style="color: gold;" href="">Go Back</a>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read (All)</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body style="background-color: black; color: gold; font-family: math;
+    font-variant-caps: unicase;">
+    <div style="margin-left: 400px;">
+        <h1 style="color: maroon; margin-left: 120px;">All shows</h1>
+        <table style="border: 2px solid gold;">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Network</th>
+                <th>Relase Date</th>
+                <th>Actions</th>
+            </tr>
+            {% for show in shows_information %}
+            <tr>
+                <td>{{show.id}}</td>
+                <td>{{show.title}}</td>
+                <td>{{show.network}}</td>
+                <td>{{show.date}}</td>
+                <td><a href="">link</a><a>Edit</a><a>Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="">Add a New Shows</a>
+    </div>
+</body>
+</html>

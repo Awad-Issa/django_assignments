@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read (One)</title>
+</head>
+<style>
+    *{ background-color: black;font-family: cursive;}    h1{color: gold;}    span{color: gold;} h3{color: maroon;} a{color: goldenrod;}
+</style>
+<body>
+    <h1><span>TV Show </span> {{shows_information1.id}}</h1>
+    <br>
+    <h3><span>Title: </span>  {{shows_information1.show_title}}</h3>
+    <h3><span>Network: </span>  {{shows_information1.show_network}}</h3>
+    <br>
+    <h3><span>Relase Date: </span>  {{shows_information1.show_date}}</h3>
+    <br>
+    <h3><span>Description: </span>  {{shows_information1.show_desc}}</h3>
+    <br><br><br><br><br>
+    <h3><span>Last Update: </span> {{shows_information1.updated_at}}</h3>
+
+    <a href="/edit/{{shows_information1.id}}">Edit</a> | <a href="/delete/{{shows_information1.id}}">Delete</a>
+    <a href="/shows">Go back</a>
+</body>
+</html>

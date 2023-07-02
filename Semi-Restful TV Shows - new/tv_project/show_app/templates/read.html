@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read (All)</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <style>
+      a {
+        color: maroon;
+        margin-right: 10px;
+      }
+      td {
+        color: darkblue;
+        font-size: 20px;
+      }
+      th {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-color: black;
+      color: gold;
+      font-family: math;
+      font-variant-caps: unicase;
+    "
+  >
+    <div style="margin-left: 300px; text-align: left">
+      <h1 style="color: gold; font-size: 45px; font-family: cursive">
+        All shows:
+      </h1>
+      <table style="border: 2px solid gold; width: 700px; text-align: center">
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Network</th>
+          <th>Relase Date</th>
+          <th>Actions</th>
+        </tr>
+        {% for i in shows_information %}
+        <tr>
+          <td style="color: gold">{{i.id}}</td>
+          <td>{{i.show_title}}</td>
+          <td>{{i.show_network}}</td>
+          <td>{{i.show_date}}</td>
+          <td>
+            <a href="shows/{{i.id}}">link</a><a href="edit/{{i.id}}">Edit</a
+            ><a href="delete/{{i.id}}">delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+      <a href="/" style="color: gold">Add a New Shows</a>
+    </div>
+  </body>
+</html>
